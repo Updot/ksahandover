@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Alef:wght@400;700&family=Inter:wght@200;300;400;500&family=Lateef&display=swap");
+@font-face {
+  font-family: Agaramond;
+  src: url(../fonts/AgaramondPro-Regular.otf);
+}
+@font-face {
+  font-family: Berlin;
+  src: url(../fonts/BerlingskeSerifDisplay-Regular.otf);
+}
+@font-face {
+  font-family: NobelBook;
+  src: url(../fonts/NobelBook.otf);
+}
+@font-face {
+  font-family: NobelLight;
+  src: url(../fonts/nobel-light.ttf);
+}
+@font-face {
+  font-family: AlTarikh;
+  src: url(../fonts/AlTarikh.ttf);
+}
+
+$grey-light: #fafafa;
+$grey-main: #d4d4d4;
+$grey-dark: #858586;
+$primary-main: #06185f;
+$primary-dark: #0c1b54;
+$primary-darker: #0a1644;
+$orange-main: #f3c8a6;
+
+$xs-screen: 600px;
+$sm-screen: 900px;
+
+// $font-lateef: Lateef, serif;
+// $font-alef: Alef, sans-serif;
+// $font-inter: Inter, sans-serif;
+$font-agaramond: Agaramond, serif;
+$font-berlin: Berlin, sans-serif;
+$font-nobel-book: NobelBook, serif;
+$font-nobel-light: NobelLight, serif;
+$font-al-tarikh: AlTarikh, serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: $font-agaramond;
+}
+
+body {
+  overflow-x: hidden !important;
+  background-color: $primary-main;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}

@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Alef:wght@400;700&family=Inter:wght@200;300;400;500&family=Lateef&display=swap");
+@font-face {
+  font-family: Agaramond;
+  src: url(../fonts/AgaramondPro-Regular.otf);
+}
+
+@font-face {
+  font-family: Berlin;
+  src: url(../fonts/BerlingskeSerifDisplay-Regular.otf);
+}
+
+@font-face {
+  font-family: NobelBook;
+  src: url(../fonts/NobelBook.otf);
+}
+
+@font-face {
+  font-family: NobelLight;
+  src: url(../fonts/nobel-light.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: Agaramond, serif;
+}
+
+body {
+  overflow-x: hidden !important;
+  background-color: #06185f;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
