@@ -166,7 +166,7 @@ function Form({ setFailMessage }) {
     else
       setData({
         ...data,
-        pickedDate: `${pickedDate.getFullYear()}-01-${pickedDate.getDate()}`,
+        pickedDate: `${pickedDate.getFullYear()}-03-${pickedDate.getDate()}`,
       });
   }, [pickedDate]);
 
