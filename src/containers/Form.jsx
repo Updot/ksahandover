@@ -90,6 +90,7 @@ function Form({ setFailMessage }) {
   const [province, setProvince] = useState("");
   // const [noOfTickets, setNoOfTickets] = useState(1);
   const [success, setSuccess] = useState(false);
+  const [hasAgreed, setHasAgreed] = useState(false);
 
   const classes = useStyles();
 
@@ -304,67 +305,76 @@ function Form({ setFailMessage }) {
               </>
             )}
 
-            <Safe />
+            <Safe
+              hasAgreed={hasAgreed}
+              setHasAgreed={setHasAgreed}
+            />
 
             {/* <Tickets value={data.tickets} setNoOfTickets={setNoOfTickets} /> */}
-
-            <Grid style={{ margin: "20px 0" }} item xs={12}>
-              <div className={classes.calendarContainer}>
-                <div className={classes.calendarHeader}>
-                  {lang === "English" ? (
-                    <p>Available dates</p>
-                  ) : (
-                    <p>المواعيد المتاحة</p>
-                  )}
-                </div>
-                <Grid
-                  container
-                  justifyContent="space-between"
-                  alignItems="flex-end"
-                >
-                  <Calendar
-                    value={pickedDate}
-                    setPickedDate={setPickedDate}
-                    error={errors.pickedDate}
-                  />
-                  <Grid className={classes.rightContainer} item xs={12} md={6}>
-                    <Info value={pickedDate} />
-                    <Grid container className={classes.buttonsContainer}>
-                      <Grid item xs={5}>
-                        <Button
-                          startIcon={<CloseIcon />}
-                          disableElevation
-                          variant="contained"
-                          style={{
-                            width: "100%",
-                            backgroundColor: "#D4D4D4",
-                            color: "black",
-                            textTransform: "capitalize",
-                          }}
-                          onClick={clearFields}
-                        >
-                          {lang === "English" ? <>Discard</> : <>تجاهل</>}
-                        </Button>
-                      </Grid>
-                      <Grid item xs={5}>
-                        <Button
-                          startIcon={<CheckIcon />}
-                          disableElevation
-                          style={{
-                            width: "100%",
-                            textTransform: "capitalize",
-                          }}
-                          variant="contained"
-                          type="submit"
-                        >
-                          {lang === "English" ? <>Confirm</> : <>تأكيد</>}
-                        </Button>
+            {hasAgreed && (
+              <Grid style={{ margin: "20px 0" }} item xs={12}>
+                <div className={classes.calendarContainer}>
+                  <div className={classes.calendarHeader}>
+                    {lang === "English" ? (
+                      <p>Available dates</p>
+                    ) : (
+                      <p>المواعيد المتاحة</p>
+                    )}
+                  </div>
+                  <Grid
+                    container
+                    justifyContent="space-between"
+                    alignItems="flex-end"
+                  >
+                    <Calendar
+                      value={pickedDate}
+                      setPickedDate={setPickedDate}
+                      error={errors.pickedDate}
+                    />
+                    <Grid
+                      className={classes.rightContainer}
+                      item
+                      xs={12}
+                      md={6}
+                    >
+                      <Info value={pickedDate} />
+                      <Grid container className={classes.buttonsContainer}>
+                        <Grid item xs={5}>
+                          <Button
+                            startIcon={<CloseIcon />}
+                            disableElevation
+                            variant="contained"
+                            style={{
+                              width: "100%",
+                              backgroundColor: "#D4D4D4",
+                              color: "black",
+                              textTransform: "capitalize",
+                            }}
+                            onClick={clearFields}
+                          >
+                            {lang === "English" ? <>Discard</> : <>تجاهل</>}
+                          </Button>
+                        </Grid>
+                        <Grid item xs={5}>
+                          <Button
+                            startIcon={<CheckIcon />}
+                            disableElevation
+                            style={{
+                              width: "100%",
+                              textTransform: "capitalize",
+                            }}
+                            variant="contained"
+                            type="submit"
+                          >
+                            {lang === "English" ? <>Confirm</> : <>تأكيد</>}
+                          </Button>
+                        </Grid>
                       </Grid>
                     </Grid>
                   </Grid>
-                </Grid>
-              </div>
-            </Grid>
+                </div>
+              </Grid>
+            )}
           </Grid>
         </Box>
       </div>

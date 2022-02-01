@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid } from "@mui/material";
+import { Grid, Checkbox } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import { useLangContext } from "../contexts/LanguageContext";
 import image from "../images/lock.svg";
@@ -24,36 +24,54 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-function Safe() {
+function Safe({ hasAgreed, setHasAgreed }) {
   const lang = useLangContext();
 
   const classes = useStyles();
 
   return (
-    <Grid
-      container
-      className={classes.container}
-      alignItems="flex-start"
-      justifyContent="flex-start"
-    >
-      <Grid item xs={2} sm={1}>
-        <img className={classes.image} src={image} alt="lock" />
+    <>
+      <Grid
+        container
+        className={classes.container}
+        alignItems="flex-start"
+        justifyContent="flex-start"
+      >
+        <Grid item xs={2} sm={1}>
+          <img className={classes.image} src={image} alt="lock" />
+        </Grid>
+        <Grid item xs={8} sm={9}>
+          <p className={classes.title}>
+            {lang === "English" ? (
+              <>Your Information is Safe</>
+            ) : (
+              <>بياناتك الشخصية محميّة وسريّة</>
+            )}
+          </p>
+          <p className={classes.text} style={{ marginTop: 5 }}>
+            We respect your privacy and do not tolerate spam and will never
+            sell, rent, lease or give away your information to any third party.
+            Nor will we send you unsolicited email.
+          </p>
+        </Grid>
       </Grid>
-      <Grid item xs={8} sm={9}>
-        <p className={classes.title}>
-          {lang === "English" ? (
-            <>Your Information is Safe</>
-          ) : (
-            <>بياناتك الشخصية محميّة وسريّة</>
-          )}
-        </p>
-        <p className={classes.text} style={{ marginTop: 5 }}>
-          We respect your privacy and do not tolerate spam and will never sell,
-          rent, lease or give away your information to any third party. Nor will
-          we send you unsolicited email.
-        </p>
+      <Grid
+        container
+        className={classes.container}
+        alignItems="flex-start"
+        justifyContent="flex-start"
+      >
+        <Grid item xs={2} sm={1}>
+          <Checkbox
+            checked={hasAgreed}
+            onChange={(e) => setHasAgreed(e.target.checked)}
+          />
+        </Grid>
+        <Grid item xs={8} sm={9}>
+          <p className={classes.text}>Agree to terms and conditions</p>
+        </Grid>
       </Grid>
-    </Grid>
+    </>
   );
 }
 
