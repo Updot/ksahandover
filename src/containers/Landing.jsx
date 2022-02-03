@@ -1,4 +1,3 @@
-import { fontFamily } from "@mui/system";
 import React from "react";
 import { useLangContext } from "../contexts/LanguageContext";
 
@@ -28,7 +27,7 @@ function Landing() {
           </div>
         ) : (
           <div className="part2 arabic">
-            <p className="date">١٦- ٢٦مارس ٢٠٢٢</p>
+            <p className="date">١٦ - ٢٦ مارس ٢٠٢٢</p>
             <p className="place">
               تجربة غامرة لاكتشاف عالم التيجان الفاخرة
               <br />

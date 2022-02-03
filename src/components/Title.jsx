@@ -22,7 +22,7 @@ function Title({ value, setTitle, error = null }) {
           {lang === "English" ? <>Title</> : <>اللقب</>}
         </FormLabel>
         <p style={{ display: "inline" }}>
-          {lang === "English" ? <>Mr.</> : <>السيّد</>}
+          {lang === "English" ? <>Mr.</> : <>السيد</>}
         </p>
         <Checkbox
           name="mr"
