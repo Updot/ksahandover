@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  Grid,
-  Checkbox,
-  FormControl,
-  FormLabel,
-  FormHelperText,
-} from "@mui/material";
+import { Grid, Checkbox, FormControl, FormHelperText } from "@mui/material";
 import { useLangContext } from "../contexts/LanguageContext";
 
 function Legal({ legalCheck, setLegalCheck, error }) {
@@ -14,9 +8,6 @@ function Legal({ legalCheck, setLegalCheck, error }) {
   return (
     <Grid item xs={12} style={{ textAlign: "left" }}>
       <FormControl className="title-container" error={!!error}>
-        {/* <FormLabel style={{ marginRight: 20, fontSize: "1.2rem" }}>
-          {lang === "English" ? <>Title</> : <>اللقب</>}
-        </FormLabel> */}
         {lang === "English" ? (
           <div
             style={{
@@ -24,7 +15,6 @@ function Legal({ legalCheck, setLegalCheck, error }) {
               justifyContent: "space-between",
               alignItems: "center",
               textAlign: "left",
-              //   marginBottom: 20,
             }}
           >
             <Checkbox
@@ -49,7 +39,6 @@ function Legal({ legalCheck, setLegalCheck, error }) {
               justifyContent: "space-between",
               alignItems: "center",
               textAlign: "right",
-              //   marginBottom: 20,
             }}
           >
             <p style={{ display: "inline", padding: "0 20px" }}>
