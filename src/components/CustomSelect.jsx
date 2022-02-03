@@ -11,6 +11,7 @@ import {
 } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import DownIcon from "./DownIcon";
+import { useLangContext } from "../contexts/LanguageContext";
 
 const useStyles = makeStyles((theme) => ({
   box: {
@@ -64,6 +65,8 @@ function CustomButton({ isOpen, setIsOpen }) {
 }
 
 function CustomSelect({ value, setProvince, sm, error = null }) {
+  const lang = useLangContext();
+
   const [isOpen, setIsOpen] = useState(false);
 
   const classes = useStyles();
@@ -76,7 +79,9 @@ function CustomSelect({ value, setProvince, sm, error = null }) {
     <Grid item xs={12} sm={sm} style={{ padding: "0 5px" }}>
       <Box className={classes.box}>
         <FormControl fullWidth error={!!error}>
-          <InputLabel>Country</InputLabel>
+          <InputLabel>
+            {lang === "English" ? <>Country</> : <>الدولة</>}
+          </InputLabel>
           <Select
             value={value}
             onChange={handleChange}
@@ -90,13 +95,23 @@ function CustomSelect({ value, setProvince, sm, error = null }) {
             open={isOpen}
           >
             <MenuItem value={"United Arab Emirates"}>
-              United Arab Emirates
+              {lang === "English" ? <>United Arab Emirates</> : <>الإمارات</>}
             </MenuItem>
-            <MenuItem value={"Saudi Arabia"}>Saudi Arabia</MenuItem>
-            <MenuItem value={"Qatar"}>Qatar</MenuItem>
-            <MenuItem value={"Oman"}>Oman</MenuItem>
-            <MenuItem value={"Kuwait"}>Kuwait</MenuItem>
-            <MenuItem value={"Bahrain"}>Bahrain</MenuItem>
+            <MenuItem value={"Saudi Arabia"}>
+              {lang === "English" ? <>Saudi Arabia</> : <>السعودية</>}
+            </MenuItem>
+            <MenuItem value={"Qatar"}>
+              {lang === "English" ? <>Qatar</> : <>قطر</>}
+            </MenuItem>
+            <MenuItem value={"Oman"}>
+              {lang === "English" ? <>Oman</> : <>عُمان</>}
+            </MenuItem>
+            <MenuItem value={"Kuwait"}>
+              {lang === "English" ? <>Kuwait</> : <>الكويت</>}
+            </MenuItem>
+            <MenuItem value={"Bahrain"}>
+              {lang === "English" ? <>Bahrain</> : <>البحرين</>}
+            </MenuItem>
           </Select>
           {error && (
             <FormHelperText
