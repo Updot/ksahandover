@@ -11,6 +11,7 @@ import CheckIcon from "@mui/icons-material/Check";
 import CloseIcon from "@mui/icons-material/Close";
 import Title from "../components/Title";
 import Safe from "../components/Safe";
+import Legal from "../components/Legal";
 import Info from "../components/Info";
 import axios from "axios";
 
@@ -89,6 +90,7 @@ function Form({ setFailMessage }) {
   const [pickedDate, setPickedDate] = useState(null);
   const [province, setProvince] = useState("");
   // const [noOfTickets, setNoOfTickets] = useState(1);
+  const [legalCheck, setLegalCheck] = useState(false);
   const [success, setSuccess] = useState(false);
 
   const classes = useStyles();
@@ -110,6 +112,7 @@ function Form({ setFailMessage }) {
       : "Invalid phone number";
     temp.pickedDate = data.pickedDate !== "" ? "" : "This field is required";
     temp.province = data.province !== "" ? "" : "This field is required";
+    temp.legalCheck = legalCheck ? "" : "This field is required";
 
     setErrors({ ...temp });
 
@@ -143,6 +146,9 @@ function Form({ setFailMessage }) {
         .catch((error) => {
           console.log(error);
           setFailMessage("An error occured");
+        })
+        .then(() => {
+          clearFields();
         });
     }
   };
@@ -151,6 +157,7 @@ function Form({ setFailMessage }) {
     setData(initValues);
     setTitle(null);
     setPickedDate(null);
+    setLegalCheck(false);
   };
 
   useEffect(() => {
@@ -305,6 +312,11 @@ function Form({ setFailMessage }) {
             )}
 
             <Safe />
+            <Legal
+              legalCheck={legalCheck}
+              setLegalCheck={setLegalCheck}
+              error={errors.legalCheck}
+            />
 
             {/* <Tickets value={data.tickets} setNoOfTickets={setNoOfTickets} /> */}
 

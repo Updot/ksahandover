@@ -45,9 +45,11 @@ function Info({ value }) {
         {lang === "English" ? (
           <>Select date</>
         ) : (
-          <p style={{ textAlign: "right", paddingRight: 10 }}>
+          <span
+            style={{ display: "block", textAlign: "right", paddingRight: 10 }}
+          >
             التاريخ المُختار
-          </p>
+          </span>
         )}
       </p>
       <Grid

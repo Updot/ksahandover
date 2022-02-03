@@ -38,7 +38,7 @@ function Map() {
       justifyContent="space-between"
       alignItems="center"
     >
-      <Grid xs={12} md={6}>
+      <Grid item xs={12} md={6}>
         <p className={classes.text}>King Fahad national library, Riyadh</p>
       </Grid>
       <Grid
@@ -56,7 +56,6 @@ function Map() {
             height: 700,
             borderRadius: 20,
           }}
-          allowfullscreen=""
           loading="lazy"
         ></iframe>
       </Grid>

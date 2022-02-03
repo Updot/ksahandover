@@ -12,8 +12,8 @@ function App() {
     palette: {
       primary: {
         main: "#06185f",
-        dark: "#0C1B54",
-        darker: "#0A1644",
+        dark: "#06185f",
+        darker: "#06185f",
       },
       orange: {
         main: "#F3C8A6",
