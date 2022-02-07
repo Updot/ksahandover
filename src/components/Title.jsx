@@ -12,15 +12,29 @@ function Title({ value, setTitle, error = null }) {
   const lang = useLangContext();
 
   return (
-    <Grid item xs={12} style={{ marginLeft: 20, textAlign: "left" }}>
+    <Grid
+      item
+      xs={12}
+      style={{
+        marginLeft: 20,
+        textAlign: `${lang === "English" ? "left" : "right"}`,
+        direction: `${lang === "English" ? "ltr" : "rtl"}`,
+      }}
+    >
       <FormControl
         className="title-container"
         style={{ display: "contents" }}
         error={!!error}
       >
-        <FormLabel style={{ marginRight: 20, fontSize: "1.2rem" }}>
+        <FormLabel
+          style={{
+            margin: `${lang === "English" ? "0 20px 0 0" : "0 20px"}`,
+            fontSize: "1.2rem",
+          }}
+        >
           {lang === "English" ? <>Title</> : <>اللقب</>}
         </FormLabel>
+        &nbsp;
         <p style={{ display: "inline" }}>
           {lang === "English" ? <>Mr.</> : <>السيد</>}
         </p>
