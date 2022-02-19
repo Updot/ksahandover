@@ -241,7 +241,7 @@
 .intro-container {
   background-color: white;
   width: 90% !important;
-  margin: 60px auto 0 auto;
+  margin: 0 auto;
   padding: 50px;
 
   #left-content {
@@ -284,6 +284,11 @@
   color: $grey-dark;
   // font-family: $font-alef;
   font-size: 1.1rem;
+
+  a {
+    color: grey;
+    text-decoration: none;
+  }
 
   span.MuiCheckbox-root {
     svg {
@@ -340,8 +345,6 @@
 }
 
 footer.footer {
-  margin-top: 75px;
-
   .upper-footer {
     background-color: $primary-dark;
     color: white;
@@ -475,6 +478,42 @@ footer.footer {
         width: 25px;
         height: 25px;
         border-radius: 50%;
+      }
+    }
+  }
+}
+
+.privacy {
+  background-color: white;
+  margin-top: 90px;
+  padding: 50px 100px;
+  text-align: justify;
+
+  @media (max-width: 600px) {
+    padding: 50px;
+  }
+
+  p {
+    margin: 10px 0;
+  }
+  h3 {
+    margin: 40px 0 20px 0;
+  }
+  ul {
+    li {
+      margin: 20px;
+    }
+  }
+  ol {
+    list-style-type: lower-roman;
+    li {
+      margin: 20px;
+
+      ul {
+        list-style-type: disc;
+        li {
+          margin: 5px 10px;
+        }
       }
     }
   }

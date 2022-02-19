@@ -6,6 +6,7 @@ import Home from "./containers/Home";
 import Footer from "./containers/Footer";
 import Map from "./containers/Map";
 import Header from "./components/Header";
+import PrivacyPolicy from "./containers/PrivacyPolicy";
 
 function App() {
   const theme = createTheme({
@@ -44,6 +45,7 @@ function App() {
             }
           />
           <Route path="/map" element={<Map />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         </Routes>
         <Footer />
       </LanguageContext>

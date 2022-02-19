@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Grid, Checkbox, FormControl, FormHelperText } from "@mui/material";
 import { useLangContext } from "../contexts/LanguageContext";
 
@@ -27,9 +28,11 @@ function Legal({ legalCheck, setLegalCheck, error }) {
               className={legalCheck === true ? "checked" : "unchecked"}
             />
             <p style={{ display: "inline", padding: "0 20px" }}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Et unde
-              ipsum expedita, quod totam ad labore alias, rem pariatur quis eum!
-              Hic magni iste illo eum, consequuntur natus mollitia at.
+              <Link to="/privacy-policy">
+                By ticking this box I agree that I have read and accepted the
+                privacy notice. If you are a minor, you must let your parent or
+                guardian know about our privacy notice.
+              </Link>
             </p>
           </div>
         ) : (
@@ -42,10 +45,11 @@ function Legal({ legalCheck, setLegalCheck, error }) {
             }}
           >
             <p style={{ display: "inline", padding: "0 20px" }}>
-              نتيجة طبيعية موليتية فينتيجة طبيعية موليتية فينتيجة طبيعية موليتية
-              فينتيجة طبيعية موليتية فينتيجة طبيعية موليتية فينتيجة طبيعية
-              موليتية فينتيجة طبيعية موليتية فيطبيعية موليتية فيطبيعية موليتية
-              فيطبيعية موليتية في
+              <Link to="/privacy-policy">
+                عبر وضعي إشارة في هذا المربّع أوافق على أنني اطلعت وقبلت بشعار
+                الخصوصيّة. إذا كنت قاصراً، فالمطلوب من ذويك أو الوصي عليك
+                الإطلاع على إشعار الخصوصيّة الخاص بنا
+              </Link>
             </p>
             <Checkbox
               name="mr"

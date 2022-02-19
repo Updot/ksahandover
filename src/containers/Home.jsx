@@ -41,10 +41,12 @@ function Home({ isFormOpen, setIsFormOpen }) {
         </Alert>
       )}
       <Landing />
-      <Intro isFormOpen={isFormOpen} setIsFormOpen={setIsFormOpen} />
-      <Collapse in={isFormOpen}>
-        <Form setFailMessage={setFailMessage} />
-      </Collapse>
+      <div style={{ padding: "60px 0" }}>
+        <Intro isFormOpen={isFormOpen} setIsFormOpen={setIsFormOpen} />
+        <Collapse in={isFormOpen}>
+          <Form setFailMessage={setFailMessage} />
+        </Collapse>
+      </div>
     </>
   );
 }
