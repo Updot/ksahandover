@@ -489,6 +489,12 @@ footer.footer {
   padding: 50px 100px;
   text-align: justify;
 
+  &.arabic {
+    * {
+      direction: rtl;
+    }
+  }
+
   @media (max-width: 600px) {
     padding: 50px;
   }
