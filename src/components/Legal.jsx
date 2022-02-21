@@ -28,11 +28,10 @@ function Legal({ legalCheck, setLegalCheck, error }) {
               className={legalCheck === true ? "checked" : "unchecked"}
             />
             <p style={{ display: "inline", padding: "0 20px" }}>
-              <Link to="/privacy-policy">
-                By ticking this box I agree that I have read and accepted the
-                privacy notice. If you are a minor, you must let your parent or
-                guardian know about our privacy notice.
-              </Link>
+              By checking this box I agree that I have read and accepted the{" "}
+              <Link to="/privacy-policy">privacy notice</Link>. If you are a
+              minor, you must let your parent or guardian know about our{" "}
+              <Link to="/privacy-policy">privacy notice</Link>.
             </p>
           </div>
         ) : (
@@ -44,12 +43,13 @@ function Legal({ legalCheck, setLegalCheck, error }) {
               textAlign: "right",
             }}
           >
-            <p style={{ display: "inline", padding: "0 20px" }}>
-              <Link to="/privacy-policy">
-                عبر وضعي إشارة في هذا المربّع أوافق على أنني اطلعت وقبلت بشعار
-                الخصوصيّة. إذا كنت قاصراً، فالمطلوب من ذويك أو الوصي عليك
-                الإطلاع على إشعار الخصوصيّة الخاص بنا
-              </Link>
+            <p
+              style={{ display: "inline", padding: "0 20px", direction: "rtl" }}
+            >
+              عبر وصعي إشارة في هذا المربّع أوافق على أنني اطلعت وقبلت{" "}
+              <Link to="/privacy-policy">بإشعار الخصوصيّة</Link>. إذا كنت
+              قاصراً، فالمطلوب من ذويك أو الوصي عليك الإطلاع على{" "}
+              <Link to="/privacy-policy">إشعار الخصوصيّة</Link> الخاص بنا.
             </p>
             <Checkbox
               name="mr"
