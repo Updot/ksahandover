@@ -46,7 +46,7 @@ function Legal({ legalCheck, setLegalCheck, error }) {
             <p
               style={{ display: "inline", padding: "0 20px", direction: "rtl" }}
             >
-              عبر وصعي إشارة في هذا المربّع أوافق على أنني اطلعت وقبلت{" "}
+              عبر وضعي إشارة في هذا المربّع أوافق على أنني اطلعت وقبلت{" "}
               <Link to="/privacy-policy">بإشعار الخصوصيّة</Link>. إذا كنت
               قاصراً، فالمطلوب من ذويك أو الوصي عليك الإطلاع على{" "}
               <Link to="/privacy-policy">إشعار الخصوصيّة</Link> الخاص بنا.

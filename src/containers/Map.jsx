@@ -33,7 +33,7 @@ function Map() {
 
   return (
     <Grid
-      style={{ marginTop: 170 }}
+      style={{ marginTop: 170, marginBottom: 100 }}
       container
       justifyContent="space-between"
       alignItems="center"
