@@ -295,6 +295,7 @@ function Form({ setFailMessage }) {
                   label="رقم الهاتف"
                   type="text"
                   name="phoneNumber"
+                  placeholder="50XXXXXXX"
                   handleInputChange={handleInputChange}
                   error={errors.phoneNumber}
                   sm={4}
