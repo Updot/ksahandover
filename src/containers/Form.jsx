@@ -250,6 +250,7 @@ function Form({ setFailMessage }) {
                   label="Phone number"
                   type="text"
                   name="phoneNumber"
+                  placeholder="50XXXXXXX"
                   handleInputChange={handleInputChange}
                   error={errors.phoneNumber}
                   sm={4}
