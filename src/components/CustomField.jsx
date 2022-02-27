@@ -26,7 +26,6 @@ function CustomField({
   label,
   type,
   name,
-  placeholder,
   handleInputChange,
   error = null,
   sm,
@@ -40,7 +39,6 @@ function CustomField({
         label={label}
         type={type}
         name={name}
-        placeholder={placeholder}
         value={value}
         onChange={handleInputChange}
         error={!!error}

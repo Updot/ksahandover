@@ -10,7 +10,7 @@ import CustomSelect from "../components/CustomSelect";
 import CheckIcon from "@mui/icons-material/Check";
 import CloseIcon from "@mui/icons-material/Close";
 import Title from "../components/Title";
-import Safe from "../components/Safe";
+// import Safe from "../components/Safe";
 import Legal from "../components/Legal";
 import Info from "../components/Info";
 import axios from "axios";
@@ -250,7 +250,6 @@ function Form({ setFailMessage }) {
                   label="Phone number"
                   type="text"
                   name="phoneNumber"
-                  placeholder="50XXXXXXX"
                   handleInputChange={handleInputChange}
                   error={errors.phoneNumber}
                   sm={4}
@@ -296,7 +295,6 @@ function Form({ setFailMessage }) {
                   label="رقم الهاتف"
                   type="text"
                   name="phoneNumber"
-                  placeholder="50XXXXXXX"
                   handleInputChange={handleInputChange}
                   error={errors.phoneNumber}
                   sm={4}
@@ -313,7 +311,7 @@ function Form({ setFailMessage }) {
               </>
             )}
 
-            <Safe />
+            {/* <Safe /> */}
             <Legal
               legalCheck={legalCheck}
               setLegalCheck={setLegalCheck}

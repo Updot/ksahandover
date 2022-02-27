@@ -7,7 +7,7 @@ function Legal({ legalCheck, setLegalCheck, error }) {
   const lang = useLangContext();
 
   return (
-    <Grid item xs={12} style={{ textAlign: "left" }}>
+    <Grid item xs={12} style={{ textAlign: "left", marginTop: 50 }}>
       <FormControl className="title-container" error={!!error}>
         {lang === "English" ? (
           <div

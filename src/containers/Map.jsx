@@ -1,6 +1,7 @@
 import React from "react";
 import { Grid } from "@mui/material";
 import { makeStyles } from "@mui/styles";
+import { useLangContext } from "../contexts/LanguageContext";
 
 const useStyles = makeStyles((theme) => ({
   text: {
@@ -14,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up("md")]: {
       fontSize: "2rem",
       textAlign: "left",
-      margin: "0 20px 0 10%",
+      margin: "0 75px 0 10%",
     },
   },
   map: {
@@ -31,6 +32,8 @@ const useStyles = makeStyles((theme) => ({
 function Map() {
   const classes = useStyles();
 
+  const lang = useLangContext();
+
   return (
     <Grid
       style={{ marginTop: 170, marginBottom: 100 }}
@@ -39,7 +42,13 @@ function Map() {
       alignItems="center"
     >
       <Grid item xs={12} md={6}>
-        <p className={classes.text}>King Fahad national library, Riyadh</p>
+        {lang === "English" ? (
+          <p className={classes.text}>King Fahad national library, Riyadh</p>
+        ) : (
+          <p className={classes.text} style={{ textAlign: "right" }}>
+            مكتبة الملك فهد الوطنية، الرياض
+          </p>
+        )}
       </Grid>
       <Grid
         className={classes.map}
