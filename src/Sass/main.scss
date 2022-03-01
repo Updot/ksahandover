@@ -134,7 +134,7 @@
         position: absolute;
         font-size: 1.1rem;
         left: 50%;
-        top: 79vw;
+        top: 80vw;
         width: 100%;
         transform: translateX(-50%);
       }
@@ -155,6 +155,7 @@
       }
 
       &.arabic {
+        line-height: 27px;
         p {
           font-family: $font-al-tarikh !important;
         }
@@ -162,23 +163,22 @@
           position: absolute;
           font-size: 1.2rem;
           left: 50%;
-          top: 79vw;
+          top: 80vw;
           width: 100%;
           transform: translateX(-50%);
         }
         @media (max-width: 900px) {
           font-size: 1.1rem;
-          top: 79vw;
-        }
-        @media (max-width: 800px) {
           top: 77vw;
         }
         @media (max-width: 800px) {
           font-size: 1rem;
+          top: 75vw;
         }
         @media (max-width: 700px) {
           font-size: 0.9rem;
-          top: 76vw;
+          top: 73vw;
+          line-height: 17px;
         }
         @media (max-width: 600px) {
           top: 72vw;
@@ -186,9 +186,10 @@
         @media (max-width: 500px) {
           font-size: 0.75rem;
           top: 73vw;
+          line-height: 13px;
         }
         @media (max-width: 400px) {
-          top: 68vw;
+          top: 67vw;
         }
       }
     }
@@ -202,10 +203,10 @@
         top: 76vw;
         left: 50%;
         transform: translateX(-50%);
-      }
-      @media (max-width: 900px) {
         display: none;
       }
+      // @media (max-width: 900px) {
+      // }
     }
   }
   p.hashtag {

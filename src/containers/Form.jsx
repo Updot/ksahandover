@@ -107,9 +107,7 @@ function Form({ setFailMessage }) {
       )
         ? ""
         : "Invalid email";
-    temp.phoneNumber = /^(\+971)?[0-9]{9}$/.test(data.phoneNumber)
-      ? ""
-      : "Invalid phone number";
+    temp.phoneNumber = data.phoneNumber ? "" : "Invalid phone number";
     temp.pickedDate = data.pickedDate !== "" ? "" : "This field is required";
     temp.province = data.province !== "" ? "" : "This field is required";
     temp.legalCheck = legalCheck ? "" : "This field is required";
@@ -250,6 +248,7 @@ function Form({ setFailMessage }) {
                   label="Phone number"
                   type="text"
                   name="phoneNumber"
+                  placeholder="50XXXXXXX"
                   handleInputChange={handleInputChange}
                   error={errors.phoneNumber}
                   sm={4}
@@ -295,6 +294,7 @@ function Form({ setFailMessage }) {
                   label="رقم الهاتف"
                   type="text"
                   name="phoneNumber"
+                  placeholder="50XXXXXXX"
                   handleInputChange={handleInputChange}
                   error={errors.phoneNumber}
                   sm={4}
